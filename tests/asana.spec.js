@@ -66,8 +66,8 @@ test.describe("Asana Data-Driven Tests", () => {
         await page.waitForLoadState("load");
       });
 
-      await test.step("Verify the card is within the right column", async () => {
-        // Locate the column with the title "New Requests"
+      await test.step("Verify the card is within the correct column", async () => {
+        // Locate the column with the correct title
         const columnTitle = data.column;
         const columnLocator = page.locator(
           `.BoardColumnHeaderTitle:has-text("${columnTitle}")`
